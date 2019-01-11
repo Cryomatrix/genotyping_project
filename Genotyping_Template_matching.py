@@ -11,10 +11,10 @@ import datetime
 
 ''' From OpenCV "Template Matching with multiple objects" documentation '''
 
-img_rgb = cv2.imread('C:/Users/Soraya/Desktop/Genotyping_project/sample_gel.tif')
+img_rgb = cv2.imread('C:/Users/Cryomatrix/Desktop/Genotyping_project/sample_gel.tif') # Load sample gel #
 img_rgb = cv2.flip(img_rgb, 1)
 img_gray = cv2.cvtColor(img_rgb, cv2.COLOR_BGR2GRAY)
-template = cv2.imread('C:/Users/Soraya/Desktop/Genotyping_project/template_gel.tif', 0)
+template = cv2.imread('C:/Users/Cryomatrix/Desktop/Genotyping_project/template_gel.tif', 0) # Load template #
 w, h = template.shape[::-1]
 
 locations = []
@@ -164,7 +164,7 @@ else:
     pass
 
 ''' Save image '''
-pil_img.save('C:/Users/Soraya/Desktop/Genotyping_project/' + gelist + '_' + colony + "_" + str(date_of_gel) + "_samples_" + str(
+pil_img.save('C:/Users/Cryomatrix/Desktop/Genotyping_project/' + gelist + '_' + colony + "_" + str(date_of_gel) + "_samples_" + str(
     first_sample) + "-" + str(last_sample) + '.png', 'PNG')
 
 ''' Show image '''
